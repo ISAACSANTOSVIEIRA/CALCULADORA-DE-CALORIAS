@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 *,
 html,
@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-  width: 550px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -36,8 +36,6 @@ header {
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -64,11 +62,11 @@ header {
 
 .form-group input:focus,
 .form-group select:focus {
-  border-color: #FF00FF;
+  border-color: #ff9100;
 }
 
 .form-group button {
-  background-image: linear-gradient(-90deg, #FF0000 0%, #FF00FF 100%);
+  background-image: linear-gradient(-90deg, #ffae00 0%, #ff7300 100%);
   border-radius: 5px;
   border: 0;
   height: 45px;
@@ -108,4 +106,12 @@ header {
 
 .result-content ul li strong {
   color: #FF0000;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+  }
 }
