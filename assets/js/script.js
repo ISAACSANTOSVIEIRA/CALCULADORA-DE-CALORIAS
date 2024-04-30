@@ -18,8 +18,8 @@ function handleSubmit (event) {
   );
 
   const maintenance = Math.round(tmb * Number(activityLevel));
-  const loseWeight = maintenance - 450;
-  const gainWeight = maintenance + 450;
+  const loseWeight = maintenance - 300;
+  const gainWeight = maintenance + 300;
 
   //resultados da cálculo para exibir na tela
   const layout = `
