@@ -75,7 +75,32 @@ header {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
+  width: 100%; /* Definindo largura como 100% */
+  box-sizing: border-box; /* Garante que a largura inclua padding e borda */
+  padding: 0 15px; /* Adicionando um padding para espaçamento interno */
 }
+
+.choose-menu-button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0; /* Alterando o padding para melhorar o espaçamento */
+  background-color: #ff7300;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 100%; /* Definindo a largura como 100% */
+  box-sizing: border-box; /* Garante que a largura inclua padding e borda */
+}
+
+.choose-menu-button:hover {
+  background-color: #ff9500;
+}
+
 
 .form-group:last-child {
   margin-top: 40px;
@@ -105,7 +130,7 @@ header {
 }
 
 .result-content ul li strong {
-  color: #FF0000;
+  color: #ff7300;
 }
 
 /* Media Queries */
