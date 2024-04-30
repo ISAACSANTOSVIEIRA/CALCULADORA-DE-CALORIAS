@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 
 form.addEventListener('submit', handleSubmit);
 
-function handleSubmit (event) {
+function handleSubmit(event) {
   event.preventDefault();
 
   const gender = getSelectedValue('gender');
@@ -13,8 +13,8 @@ function handleSubmit (event) {
 
   const tmb = Math.round(
     gender === 'female'
-    ? (655 + (9.6 * weight) + (1.8 * height) - (4.7 *age)) //if (cálculo pronto)
-    : (66 + (13.7 * weight) + (5 * height) - (6.8 *age)) //else
+      ? 655 + 9.6 * weight + 1.8 * height - 4.7 * age //if (cálculo pronto)
+      : 66 + 13.7 * weight + 5 * height - 6.8 * age //else
   );
 
   const maintenance = Math.round(tmb * Number(activityLevel));
@@ -23,23 +23,22 @@ function handleSubmit (event) {
 
   //resultados da cálculo para exibir na tela
   const layout = `
-    <h2>Aqui está o resultado:</h2>
+    <h2>Seus Resultados:</h2>
 
     <div class="result-content">
       <ul>
         <li>
-          Seu metabolismo basal é de <strong>${tmb} calorias</strong>.
+          Para MANTER o seu peso atual você precisa consumir em média <strong>${maintenance} calorias</strong>.
         </li>
         <li>
-          Para manter o seu peso você precisa consumir em média <strong>${maintenance} calorias</strong>.
+          Para PERDER peso você precisa consumir em média <strong>${loseWeight} calorias</strong>.
         </li>
         <li>
-          Para perder peso você precisa consumir em média <strong>${loseWeight} calorias</strong>.
-        </li>
-        <li>
-          Para ganhar peso você precisa consumir em média <strong>${gainWeight} calorias</strong>.
+          Para GANHAR peso você precisa consumir em média <strong>${gainWeight} calorias</strong>.
         </li>
       </ul>
+      <p>Tenha acesso ao GUIA de Cardápios prontos com calorias calculadas de acordo com seu objetivo, <strong><a href="https://guiacardapios.my.canva.site/cardapiosflexiveis" style="color: orange;">CLIQUE AQUI</a></strong>.</p>
+    </div>
   `;
 
   const result = document.getElementById('result');
